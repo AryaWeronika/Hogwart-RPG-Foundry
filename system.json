@@ -1,0 +1,46 @@
+{
+  "id": "systemHogwartRPG",
+  "title": "Hogwart RPG",
+  "description": "Foundry system for Hogwarts RPG, powered by the PBTA engine. Available in English. The system and mechanics were designed by David Brunell-Brutman.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "11",
+    "maximum": "12"
+  },
+
+  "authors": [
+    {
+      "name": "AryaWeronika"
+    }
+  ],
+  "background": "systems/systemHogwartRPG/assets/tlo-systemu.webp",
+  "esmodules": [
+    "module/main.js"
+  ],
+  "styles": [
+    "css/hogwart.css",
+    "css/pause.css"
+  ],
+  "languages": [
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "lang/pl.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": [
+      "character"
+    ]
+  },
+  "manifest": "https://github.com/AryaWeronika/Hogwart-RPG-Foundry/releases/latest/download/system.json",
+  "download": "https://github.com/twoj-nick/moj-fajny-modul/releases/download/v1.0.0/system.zip",
+  "readme": "https://github.com/AryaWeronika/Hogwart-RPG-Foundry/blob/main/README.md"
+
+}
