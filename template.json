@@ -1,0 +1,122 @@
+{
+
+  "Actor": {
+
+    "types": [ "character", "narrator" ],
+
+    "character": {
+
+      "biografia": "",
+
+      "odwaga": 0,
+
+      "spryt": 0,
+
+      "lojalnosc": 0,
+
+      "intelekt": 0,
+
+      "magia": 0
+
+    }
+
+  },
+
+  "Item": {
+
+    "types": []
+
+  },
+  "narrator": {
+    "rok": "1",
+    "zeszlorocznyZwyciezca": "",
+    "tajemnice": "",
+    "punkty": {
+      "gryffindor": 0,
+      "hufflepuff": 0,
+      "ravenclaw": 0,
+      "slytherin": 0
+    },
+    "glownePostacie": {
+      "1": {
+        "nazwa": "",
+        "dom": "",
+        "rok": ""
+      },
+      "2": {
+        "nazwa": "",
+        "dom": "",
+        "rok": ""
+      },
+      "3": {
+        "nazwa": "",
+        "dom": "",
+        "rok": ""
+      },
+      "4": {
+        "nazwa": "",
+        "dom": "",
+        "rok": ""
+      },
+      "5": {
+        "nazwa": "",
+        "dom": "",
+        "rok": ""
+      }
+    },
+    "postacieNarratora": {
+      "1": {
+        "nazwa": "",
+        "rola": "",
+        "cecha": ""
+      },
+      "2": {
+        "nazwa": "",
+        "rola": "",
+        "cecha": ""
+      },
+      "3": {
+        "nazwa": "",
+        "rola": "",
+        "cecha": ""
+      },
+      "4": {
+        "nazwa": "",
+        "rola": "",
+        "cecha": ""
+      },
+      "5": {
+        "nazwa": "",
+        "rola": "",
+        "cecha": ""
+      },
+      "6": {
+        "nazwa": "",
+        "rola": "",
+        "cecha": ""
+      }
+    },
+    "zagrozenia": {
+      "1": {
+        "tytul": "",
+        "dotyczy": "",
+        "stawka": "",
+        "krok": ""
+      },
+      "2": {
+        "tytul": "",
+        "dotyczy": "",
+        "stawka": "",
+        "krok": ""
+      },
+      "3": {
+        "tytul": "",
+        "dotyczy": "",
+        "stawka": "",
+        "krok": ""
+      }
+    }
+  }
+
+} 
+

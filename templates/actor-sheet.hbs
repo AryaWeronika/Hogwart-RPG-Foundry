@@ -1,0 +1,1074 @@
+<form class="flexcol hogwart-custom-sheet" autocomplete="off">
+    <div class="header-container-wrapper">
+        <div class="header-row">
+            <div class="name-container">
+                <div class="field-group">
+                    <label class="label-custom">{{localize "HOGWART.Glowna.Name"}}</label>
+                    <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize "HOGWART.Glowna.Nameo"}}" />
+                </div>
+                <div class="field-group" style="margin-top: 10px;">
+                    <label class="label-custom">{{localize "HOGWART.Glowna.House"}}</label>
+                    <select name="system.dom">
+                        {{selectOptions system.domySelected selected=system.dom blank=""}}
+                    </select>
+                </div>
+            </div>
+            <div class="wyglad-container">
+                <div class="wyglad-glowne-haslo">{{localize "HOGWART.Glowna.Wyglad"}}</div>
+                <div class="wyglad-pola-row">
+                    <div class="wyglad-segment">
+                        <input type="text" name="system.cera" value="{{system.cera}}" placeholder="..." />
+                        <label>{{localize "HOGWART.Glowna.Cera"}}</label>
+                    </div>
+                    <div class="wyglad-segment">
+                        <input type="text" name="system.wlosy" value="{{system.wlosy}}" placeholder="..." />
+                        <label>{{localize "HOGWART.Glowna.Wlosy"}}</label>
+                    </div>
+                    <div class="wyglad-segment">
+                        <input type="text" name="system.budowa" value="{{system.budowa}}" placeholder="..." />
+                        <label>{{localize "HOGWART.Glowna.Budowa"}}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="wyglad-container">
+                <div class="wyglad-glowne-haslo rozdzka-glowne-haslo">{{localize "HOGWART.Glowna.Rozdzka"}}</div>
+                <div class="wyglad-pola-row">
+                    <div class="wyglad-segment">
+                        <input type="text" name="system.rozdzkaWyglad" value="{{system.rozdzkaWyglad}}" placeholder="..." />
+                        <label>{{localize "HOGWART.Glowna.RWyglad"}}</label>
+                    </div>
+                    <div class="wyglad-segment">
+                        <input type="text" name="system.rozdzkaRdzen" value="{{system.rozdzkaRdzen}}" placeholder="..." />
+                        <label>{{localize "HOGWART.Glowna.Core"}}</label>
+                    </div>
+                    <div class="wyglad-segment">
+                        <input type="text" name="system.rozdzkaDrewno" value="{{system.rozdzkaDrewno}}" placeholder="..." />
+                        <label>{{localize "HOGWART.Glowna.Wood"}}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-img-container">
+                <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+            </div>
+
+        </div>
+        <div class="sub-header-row">
+            <div class="sub-row-segment">
+                <select name="system.rokNauki">
+                    {{selectOptions system.lataSelected selected=system.rokNauki}}
+                </select>
+                <label>{{localize "HOGWART.Glowna.Year"}}</label>
+            </div>
+            <div class="sub-row-segment">
+                <select name="system.czystoscKrwi">
+                    {{selectOptions system.krewSelected selected=system.czystoscKrwi}}
+                </select>
+                <label>{{localize "HOGWART.Glowna.Czystosc"}}</label>
+            </div>
+            <div class="sub-row-segment">
+                <input type="text" name="system.ambicja" value="{{system.ambicja}}" placeholder="..." />
+                <label>{{localize "HOGWART.Glowna.Ambicja"}}</label>
+            </div>
+            <div class="sub-row-segment">
+                <input type="text" name="system.patronus" value="{{system.patronus}}" placeholder="..." />
+                <label>{{localize "HOGWART.Glowna.Patronus"}}</label>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="arkusz">
+            <i class="fas fa-user-wizard"></i> {{localize "HOGWART.Tabs.Sheet"}}
+        </a>
+        <a class="item" data-tab="czary">
+            <i class="fas fa-books"></i> {{localize "HOGWART.Tabs.Spells"}}
+        </a>
+        <a class="item" data-tab="historia">
+            <i class="fas fa-scroll"></i> {{localize "HOGWART.Tabs.History"}}
+        </a>
+    </nav>
+    <section class="sheet-body">
+        <div class="tab active" data-group="primary" data-tab="arkusz">
+            <div class="sheet-columns-grid">
+                <div class="column-cechy">
+                    <h2 class="sekcja-naglowek custom-banner">Cechy</h2>
+                    <div class="hogwart-attributes-list">
+                        <div class="cecha-row">
+                            <label class="rollable" data-roll="2d6 + @cecha" data-cecha="odwaga"><i class="fas fa-dragon"></i>{{localize "HOGWART.Stats.Odwaga"}}</label>
+                            <input type="number" name="system.odwaga" value="{{system.odwaga}}" />
+                        </div>
+                        <div class="cecha-row">
+                            <label class="rollable" data-roll="2d6 + @cecha" data-cecha="spryt"><i class="fas fa-snake"></i>{{localize "HOGWART.Stats.Spryt"}}</label>
+                            <input type="number" name="system.spryt" value="{{system.spryt}}" />
+                        </div>
+                        <div class="cecha-row">
+                            <label class="rollable" data-roll="2d6 + @cecha" data-cecha="intelekt"><i class="fas fa-book"></i>{{localize "HOGWART.Stats.Intelekt"}}</label>
+                            <input type="number" name="system.intelekt" value="{{system.intelekt}}" />
+                        </div>
+                        <div class="cecha-row">
+                            <label class="rollable" data-roll="2d6 + @cecha" data-cecha="lojalnosc"><i class="fas fa-paw"></i>{{localize "HOGWART.Stats.Lojalnosc"}}</label>
+                            <input type="number" name="system.lojalnosc" value="{{system.lojalnosc}}" />
+                        </div>
+                        <div class="cecha-row">
+                            <label class="rollable" data-roll="2d6 + @cecha" data-cecha="magia"><i class="fas fa-wand-magic-sparkles"></i>{{localize "HOGWART.Stats.Magia"}}</label>
+                            <input type="number" name="system.magia" value="{{system.magia}}" />
+                        </div>
+                    </div>
+                    <div class="relacje-sekcja">
+                        <h3 class="sekcja-naglowek relacje-naglowek">{{localize 'HOGWART.Przyjaciele.Przyjaciele_Rywale'}}</h3>
+
+                        <div class="relacje-inputs">
+                            <div class="relacja-row">
+                                <i class="fas fa-heart relacja-icon przyjaciel-color"></i>
+                                <input type="text" name="system.przyjaciel1" value="{{system.przyjaciel1}}" placeholder="{{localize 'HOGWART.Przyjaciele.Przyjaciel'}}" />
+                            </div>
+                            <div class="relacja-row">
+                                <i class="fas fa-heart relacja-icon przyjaciel-color"></i>
+                                <input type="text" name="system.przyjaciel2" value="{{system.przyjaciel2}}" placeholder="{{localize 'HOGWART.Przyjaciele.Przyjaciel'}}" />
+                            </div>
+                            <div class="relacja-row">
+                                <i class="fas fa-heart-broken relacja-icon rywal-color"></i>
+                                <input type="text" name="system.rywal" value="{{system.rywal}}" placeholder="{{localize 'HOGWART.Przyjaciele.Rywal'}}" />
+                            </div>
+                        </div>
+                        <p class="relacje-opis">
+                            {{localize 'HOGWART.Przyjaciele.Opis'}}
+                        </p>
+                    </div>
+                    <div class="zwierzak-sekcja">
+                        <div class="zwierzak-row-main">
+                            <div class="zwierzak-badge">{{localize 'HOGWART.Przyjaciele.Zwierzak'}}</div>
+                            <div class="zwierzak-inputs-container">
+                                <div class="zwierzak-input-group">
+                                    <input type="text" name="system.zwierzakGatunek" value="{{system.zwierzakGatunek}}" placeholder="{{localize 'HOGWART.Przyjaciele.Sowa'}}" />
+                                    <label>{{localize 'HOGWART.Przyjaciele.Gatunek'}}</label>
+                                </div>
+                                <div class="zwierzak-input-group">
+                                    <input type="text" name="system.zwierzakImie" value="{{system.zwierzakImie}}" placeholder="{{localize 'HOGWART.Przyjaciele.Przyklad'}}" />
+                                    <label>{{localize 'HOGWART.Przyjaciele.Imie'}}</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="zwierzak-opis">
+                            {{localize 'HOGWART.Przyjaciele.ZwOpis'}}
+                        </p>
+                    </div>
+
+                </div> 
+
+                <div class="column-stany">
+                    <h2 class="sekcja-naglowek custom-banner">{{localize 'HOGWART.Conditions.Stany'}}</h2>
+                    <div class="stany-two-columns">
+                        <div class="stany-sub-col">
+                            <div class="stan-item">
+                                <input type="checkbox" name="system.stanPrzestraszony" {{checked system.stanPrzestraszony}} />
+                                <div class="stan-tekst"><strong>{{localize 'HOGWART.Conditions.Przestraszony'}}</strong> {{localize 'HOGWART.Conditions.PrzestraszonyOpis'}}</div>
+                            </div>
+                            <div class="stan-item">
+                                <input type="checkbox" name="system.stanZly" {{checked system.stanZly}} />
+                                <div class="stan-tekst"><strong>{{localize 'HOGWART.Conditions.Zly'}}</strong> {{localize 'HOGWART.Conditions.ZlyOpis'}}</div>
+                            </div>
+                            <div class="stan-item">
+                                <input type="checkbox" name="system.stanZestresowany" {{checked system.stanZestresowany}} />
+                                <div class="stan-tekst"><strong>{{localize 'HOGWART.Conditions.Zestresowany'}}</strong> {{localize 'HOGWART.Conditions.ZestresowanyOpis'}}</div>
+                            </div>
+                            <div class="stan-item">
+                                <input type="checkbox" name="system.stanZazdrosny" {{checked system.stanZazdrosny}} />
+                                <div class="stan-tekst"><strong>{{localize 'HOGWART.Conditions.Zazdrosny'}}</strong> {{localize 'HOGWART.Conditions.ZazdrosnyOpis'}}</div>
+                            </div>
+                            <div class="stan-item">
+                                <input type="checkbox" name="system.stanZawstydzony" {{checked system.stanZawstydzony}} />
+                                <div class="stan-tekst"><strong>{{localize 'HOGWART.Conditions.Zawstydzony'}}</strong> {{localize 'HOGWART.Conditions.ZawstydzonyOpis'}}</div>
+                            </div>
+                        </div>
+                        <div class="stany-sub-col">
+                            <div class="stan-item">
+                                <input type="checkbox" name="system.stanRanny" {{checked system.stanRanny}} />
+                                <div class="stan-tekst"><strong>{{localize 'HOGWART.Conditions.Ranny'}}</strong> {{localize 'HOGWART.Conditions.RannyOpis'}}</div>
+                            </div>
+                            <div class="stan-item" style="display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 8px;">
+                                <label class="checkbox-label" style="display: flex; align-items: flex-start; gap: 6px; width: 100%;">
+                                    <input type="checkbox" name="system.stanPrzeklety" {{checked system.stanPrzeklety}} style="margin-top: 2px;" />
+                                    <span><strong>{{localize 'HOGWART.Conditions.Przeklety'}}</strong> <small style="color: #aaa;">{{localize 'HOGWART.Conditions.PrzekletyOpis'}}</small></span>
+                                </label>
+                                {{#if system.stanPrzeklety}}
+                            <div style="margin-top: 6px; margin-left: 22px; width: calc(100% - 22px);">
+                                <select name="system.przekletyCecha" class="select-przeklety" style="width: 100%;">
+                                    {{#select system.przekletyCecha}}
+                                    <option value="">{{localize 'HOGWART.Hexed.Tytul'}}</option>
+                                    <option value="odwaga">{{localize 'HOGWART.Hexed.Odwaga'}}</option>
+                                    <option value="spryt">{{localize 'HOGWART.Hexed.Spryt'}}</option>
+                                    <option value="lojalnosc">{{localize 'HOGWART.Hexed.Lojalnosc'}}</option>
+                                    <option value="intelekt">{{localize 'HOGWART.Hexed.Intelekt'}}</option>
+                                    <option value="magia">{{localize 'HOGWART.Hexed.Magia'}}</option>
+                                    {{/select}}
+                                </select>
+                            </div>
+                                {{/if}}
+                            </div>
+                            <div class="stan-item">
+                                <input type="checkbox" name="system.stanNieprzytomny" {{checked system.stanNieprzytomny}} />
+                                <div class="stan-tekst"><strong>{{localize 'HOGWART.Conditions.Nieprzytomny'}}</strong> {{localize 'HOGWART.Conditions.NieprzytomnyOpis'}}</div>
+                            </div>
+                            <div class="stany-pomocniczy-opis">
+                                {{localize 'HOGWART.Conditions.PomocniczyOpis'}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stany-footer">
+                        <p>{{{localize 'HOGWART.Conditions.FooterText'}}}</p>
+                        <ul class="stany-wyniki-list">
+                            <li>{{{localize 'HOGWART.Conditions.Result10'}}}</li>
+                            <li>{{{localize 'HOGWART.Conditions.Result79'}}}</li>
+                            <li>{{{localize 'HOGWART.Conditions.Result6'}}}</li>
+                        </ul>
+                        <div class="blizna-container">
+                            <label>{{localize 'HOGWART.Conditions.ScarLabel'}}</label>
+                            <input type="text" name="system.stanBlizna" value="{{system.stanBlizna}}" placeholder="{{localize 'HOGWART.Conditions.ScarPlaceholder'}}" />
+                        </div>
+                    </div>
+                <div class="ulubiony-przedmiot-sekcja">
+                    <h2 class="sekcja-naglowek custom-banner">
+                        <i class="fas fa-book-open" style="margin-right: 10px; font-size: 13px;"></i>
+                        {{localize 'HOGWART.Conditions.FavPrzedmiot'}}
+                        <i class="fas fa-book-open" style="margin-left: 10px; font-size: 13px;"></i>
+                    </h2>
+                    <div class="przedmioty-inputs">
+                        <input type="text" name="system.ulubionyPrzedmiot1" value="{{system.ulubionyPrzedmiot1}}" placeholder="{{localize 'HOGWART.Conditions.Fav1'}}" />
+                        <input type="text" name="system.ulubionyPrzedmiot2" value="{{system.ulubionyPrzedmiot2}}" placeholder="{{localize 'HOGWART.Conditions.Fav2'}}" />
+                    </div>
+                    <p class="przedmiot-opis">
+                        {{localize 'HOGWART.Conditions.SubOpis'}}
+                    </p>
+                </div>
+            </div>
+
+                <div class="column-zasoby">
+                    <div class="zasob-sekcja">
+                        <h2 class="sekcja-naglowek custom-banner">{{localize 'HOGWART.PD.Szczescie'}}</h2>
+                        <div class="stars-row">
+                            <label class="checkbox-star"><input type="checkbox" name="system.szczescie1" {{checked system.szczescie1}} /><span></span></label>
+                            <label class="checkbox-star"><input type="checkbox" name="system.szczescie2" {{checked system.szczescie2}} /><span></span></label>
+                            <label class="checkbox-star"><input type="checkbox" name="system.szczescie3" {{checked system.szczescie3}} /><span></span></label>
+                        </div>
+                        <p class="zasob-opis">{{localize 'HOGWART.PD.LuckOpis'}}</p>
+                    </div>
+                    <div class="zasob-sekcja">
+                        <h2 class="sekcja-naglowek custom-banner">{{localize 'HOGWART.PD.EXP'}}</h2>
+                        <div class="diamonds-row">
+                            <label class="checkbox-diamond"><input type="checkbox" name="system.pd1" {{checked system.pd1}} /><span></span></label>
+                            <label class="checkbox-diamond"><input type="checkbox" name="system.pd2" {{checked system.pd2}} /><span></span></label>
+                            <label class="checkbox-diamond"><input type="checkbox" name="system.pd3" {{checked system.pd3}} /><span></span></label>
+                            <label class="checkbox-diamond"><input type="checkbox" name="system.pd4" {{checked system.pd4}} /><span></span></label>
+                        </div>
+                        <p class="zasob-opis">{{localize 'HOGWART.PD.ExpOpis'}}</p>
+                    </div>
+                    <div class="zasob-sekcja awans-box">
+                        <h2 class="sekcja-naglowek custom-banner">{{localize 'HOGWART.PD.Awans'}}</h2>
+                        <p class="zasob-opis" style="margin-bottom: 10px;">{{localize 'HOGWART.PD.AwansOpis'}}</p>
+
+                        <div class="awans-list">
+                            <div class="awans-dwukrotny">
+                                <input type="checkbox" name="system.awansCechy1" {{checked system.awansCechy1}} />
+                                <input type="checkbox" name="system.awansCechy2" {{checked system.awansCechy2}} />
+                                <span class="awans-etykieta">{{localize 'HOGWART.PD.ZwiekszCeche'}}</span>
+                            </div>
+                            <label class="awans-item">
+                                <input type="checkbox" name="system.awansPrzedmiot" {{checked system.awansPrzedmiot}} />
+                                {{localize 'HOGWART.PD.UlubionyPrzedmiot'}}
+                            </label>
+                            <label class="awans-item">
+                                <i class="fas fa-infinity"></i> {{localize 'HOGWART.PD.NoweZaklecie'}}
+                            </label>
+                            <label class="awans-item">
+                                <i class="fas fa-infinity"></i> {{localize 'HOGWART.PD.MagicznyPrzedmiot'}}
+                            </label>
+                            <label class="awans-item">
+                                <i class="fas fa-infinity"></i> {{localize 'HOGWART.PD.OdzyskajSzczescie'}}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="magiczne-obiekty-sekcja">
+                        <h2 class="sekcja-naglowek custom-banner">
+                            <i class="fas fa-crystal-ball" style="margin-right: 8px; font-size: 13px;"></i>
+                            {{localize 'HOGWART.EQ.EqTitle'}}
+                            <i class="fas fa-crystal-ball" style="margin-left: 8px; font-size: 13px;"></i>
+                        </h2>
+
+                        <div class="obiekty-grid">
+                            <div class="obiekty-kolumna">
+                                <input type="text" name="system.obiekt1" value="{{system.obiekt1}}" placeholder="..." />
+                                <input type="text" name="system.obiekt2" value="{{system.obiekt2}}" placeholder="..." />
+                                <input type="text" name="system.obiekt3" value="{{system.obiekt3}}" placeholder="..." />
+                                <input type="text" name="system.obiekt4" value="{{system.obiekt4}}" placeholder="..." />
+                            </div>
+                            <div class="obiekty-kolumna">
+                                <input type="text" name="system.obiekt5" value="{{system.obiekt5}}" placeholder="..." />
+                                <input type="text" name="system.obiekt6" value="{{system.obiekt6}}" placeholder="..." />
+                                <input type="text" name="system.obiekt7" value="{{system.obiekt7}}" placeholder="..." />
+                                <input type="text" name="system.obiekt8" value="{{system.obiekt8}}" placeholder="..." />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="tab" data-group="primary" data-tab="czary">
+            <div class="czary-kontener">
+                <div class="kolumna-zaklecia">
+                    <div class="rok-sekcja">
+                        <div class="rok-naglowek">{{localize 'HOGWART.Spells.1Year'}}</div>
+                        <ul class="lista-zaklec">
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.alohomora" {{checked data.zaklecia.alohomora}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Alohomora</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Alohomora'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.colovaria" {{checked data.zaklecia.colovaria}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Colovaria</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Colovaria'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.diminuendo" {{checked data.zaklecia.diminuendo}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Diminuendo</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Diminuendo'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.lumos" {{checked data.zaklecia.lumos}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Lumos</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Lumos'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.periculum" {{checked data.zaklecia.periculum}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Periculum</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Periculum'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.spongify" {{checked data.zaklecia.spongify}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Spongify</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Spongify'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.tergeo" {{checked data.zaklecia.tergeo}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Tergeo</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Tergeo'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.wingardium" {{checked data.zaklecia.wingardium}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Wingardium Leviosa</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Wingardium'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.calvario" {{checked data.zaklecia.calvario}} />
+                                <i class="fas fa-bolt ikona-klatwa" title="Klątwa"></i>
+                                <span class="nazwa-zaklecia">Calvario</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Calvario'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.locomotor" {{checked data.zaklecia.locomotor}} />
+                                <i class="fas fa-bolt ikona-klatwa" title="Klątwa"></i>
+                                <span class="nazwa-zaklecia">Locomotor Mortis</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Locomotor'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.petrificus" {{checked data.zaklecia.petrificus}} />
+                                <i class="fas fa-bolt ikona-klatwa" title="Klątwa"></i>
+                                <span class="nazwa-zaklecia">Petrificus Totalus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Totalus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.slugulus" {{checked data.zaklecia.slugulus}} />
+                                <i class="fas fa-bolt ikona-klatwa" title="Klątwa"></i>
+                                <span class="nazwa-zaklecia">Slugulus Eructo</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Slugulus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.finite" {{checked data.zaklecia.finite}} />
+                                <i class="fas fa-shield-alt ikona-obrona" title="Obrona"></i>
+                                <span class="nazwa-zaklecia">Finite Incantatem</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Finite'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.ventus" {{checked data.zaklecia.ventus}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Ventus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Ventus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.belkotliwy" {{checked data.zaklecia.belkotliwy}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Belkotliwy'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.napar" {{checked data.zaklecia.napar}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Uspokajajacy'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.kaszel" {{checked data.zaklecia.kaszel}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Kaszel'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.zmniejszajacy" {{checked data.zaklecia.zmniejszajacy}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Zmniejszajacy'}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rok-sekcja">
+                        <div class="rok-naglowek">{{localize 'HOGWART.Spells.2Year'}}</div>
+                        <ul class="lista-zaklec">
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.epoximise" {{checked data.zaklecia.epoximise}} />
+                                <i class="fas fa-wine-glass ikona-transmutacja" title="Transmutacja"></i>
+                                <span class="nazwa-zaklecia">Epoximise</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Epoximise'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.flagrate" {{checked data.zaklecia.flagrate}} />
+                                <i class="fas fa-wine-glass ikona-transmutacja" title="Transmutacja"></i>
+                                <span class="nazwa-zaklecia">Flagrate</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Flagrate'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.fumos" {{checked data.zaklecia.fumos}} />
+                                <i class="fas fa-wine-glass ikona-transmutacja" title="Transmutacja"></i>
+                                <span class="nazwa-zaklecia">Fumos</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Fumos'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.incendio" {{checked data.zaklecia.incendio}} />
+                                <i class="fas fa-wine-glass ikona-transmutacja" title="Transmutacja"></i>
+                                <span class="nazwa-zaklecia">Incendio</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Incendio'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.serpensortia" {{checked data.zaklecia.serpensortia}} />
+                                <i class="fas fa-wine-glass ikona-transmutacja" title="Transmutacja"></i>
+                                <span class="nazwa-zaklecia">Serpensortia</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Serpen'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.expelliarmus" {{checked data.zaklecia.expelliarmus}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Expelliarmus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Expelliarmus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.obscuro" {{checked data.zaklecia.obscuro}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Obscuro</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Obscuro'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.reparo" {{checked data.zaklecia.reparo}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Reparo</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Reparo'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.mucus" {{checked data.zaklecia.mucus}} />
+                                <i class="fas fa-bolt ikona-klatwa" title="Klątwa"></i>
+                                <span class="nazwa-zaklecia">Mucus ad Nauseam</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Mucus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.protego" {{checked data.zaklecia.protego}} />
+                                <i class="fas fa-shield-alt ikona-obrona" title="Obrona"></i>
+                                <span class="nazwa-zaklecia">Protego</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Protego'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.rictusempra" {{checked data.zaklecia.rictusempra}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Rictusempra</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Rictu'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.steleus" {{checked data.zaklecia.steleus}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Steleus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Steleus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.titillando" {{checked data.zaklecia.titillando}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Titillando</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Titi'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.postarzajacy" {{checked data.zaklecia.postarzajacy}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Postarzajacy'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.upiekszajacy" {{checked data.zaklecia.upiekszajacy}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Beati'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.czkawka" {{checked data.zaklecia.czkawka}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Czkawka'}}</span> 
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.mandragory" {{checked data.zaklecia.mandragory}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Mandragor1'}}</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Mandragor2'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.szczuroszczet" {{checked data.zaklecia.szczuroszczet}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Szczur1'}}</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Szczur2'}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rok-sekcja">
+                        <div class="rok-naglowek">3 ROK</div>
+                        <ul class="lista-zaklec">
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.anteoculatia" {{checked data.zaklecia.anteoculatia}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Anteoculatia</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Anteoculatia'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.colloshoo" {{checked data.zaklecia.colloshoo}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Colloshoo</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Colloshoo'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.engorgio" {{checked data.zaklecia.engorgio}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Engorgio</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Engorgio'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.tarantallegra" {{checked data.zaklecia.tarantallegra}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Tarantallegra</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Tarantallegra'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.ferula" {{checked data.zaklecia.ferula}} />
+                                <i class="fas fa-heart ikona-leczenie" title="Leczenie"></i>
+                                <span class="nazwa-zaklecia">Ferula</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Ferula'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.herbivicus" {{checked data.zaklecia.herbivicus}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Herbivicus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Herbivicus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.illegibilus" {{checked data.zaklecia.illegibilus}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Illegibilus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Illegibilus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.impervius" {{checked data.zaklecia.impervius}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Impervius</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Impervius'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.priorincantato" {{checked data.zaklecia.priorincantato}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Prior Incantato</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Prior_Incantato'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.mimblewimble" {{checked data.zaklecia.mimblewimble}} />
+                                <i class="fas fa-bolt ikona-klatwa" title="Klątwa"></i>
+                                <span class="nazwa-zaklecia">Mimble Wimble</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Mimble_Wimble'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.orchideous" {{checked data.zaklecia.orchideous}} />
+                                <i class="fas fa-wine-glass ikona-transmutacja" title="Transmutacja"></i>
+                                <span class="nazwa-zaklecia">Orchideous</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Orchideous'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.reparifarge" {{checked data.zaklecia.reparifarge}} />
+                                <i class="fas fa-wine-glass ikona-transmutacja" title="Transmutacja"></i>
+                                <span class="nazwa-zaklecia">Reparifarge</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Reparifarge'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.riddikulus" {{checked data.zaklecia.riddikulus}} />
+                                <i class="fas fa-shield-alt ikona-obrona" title="Obrona"></i>
+                                <span class="nazwa-zaklecia">Riddikulus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Riddikulus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.wywardekompresyjny" {{checked data.zaklecia.wywardekompresyjny}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.dekompresyjny'}}</span> 
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.eliksirpieprzowy" {{checked data.zaklecia.eliksirpieprzowy}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.pieprzowy1'}}</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.pieprzowy2'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.olejekobludy" {{checked data.zaklecia.olejekobludy}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Grzegorz'}}</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Grzegorz2'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.eliksirslodkiegosnu" {{checked data.zaklecia.eliksirslodkiegosnu}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.snu'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.eliksirrozdymajacy" {{checked data.zaklecia.eliksirrozdymajacy}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.rozdymajacy'}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rok-sekcja">
+                        <div class="rok-naglowek">{{localize 'HOGWART.Spells.4Year'}}</div>
+                        <ul class="lista-zaklec">
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.accio" {{checked data.zaklecia.accio}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Accio</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Accio'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.depulso" {{checked data.zaklecia.depulso}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Depulso</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Depulso'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.diffindo" {{checked data.zaklecia.diffindo}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Diffindo</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Diffindo'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.quietus" {{checked data.zaklecia.quietus}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Quietus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Quietus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.sonorus" {{checked data.zaklecia.sonorus}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Sonorus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Sonorus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.dretwota" {{checked data.zaklecia.dretwota}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Stupity1'}}</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Stupity2'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.avis" {{checked data.zaklecia.avis}} />
+                                <i class="fas fa-wine-glass ikona-transmutacja" title="Transmutacja"></i>
+                                <span class="nazwa-zaklecia">Avis</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Avis'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.incaercerous" {{checked data.zaklecia.incaercerous}} />
+                                <i class="fas fa-wine-glass ikona-transmutacja" title="Transmutacja"></i>
+                                <span class="nazwa-zaklecia">Incaercerous</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Incaercerous'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.densaugeo" {{checked data.zaklecia.densaugeo}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Densaugeo</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Densaugeo'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.furnunculus" {{checked data.zaklecia.furnunculus}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Furnunculus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Furnunculus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.impedimenta" {{checked data.zaklecia.impedimenta}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Impedimenta</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Impedimenta'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.locomotorwibbly" {{checked data.zaklecia.locomotorwibbly}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Locomotor Wibbly</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Wibbly'}}</span>
+</li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.episkey" {{checked data.zaklecia.episkey}} />
+                                <i class="fas fa-heart ikona-leczenie" title="Leczenie"></i>
+                                <span class="nazwa-zaklecia">Episkey</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Episkey'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.reducto" {{checked data.zaklecia.reducto}} />
+                                <i class="fas fa-bolt ikona-klatwa" title="Klątwa"></i>
+                                <span class="nazwa-zaklecia">Reducto</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Reducto'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.blemishblitzer" {{checked data.zaklecia.blemishblitzer}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">Blemish Blitzer</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Blemish'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.ochronaognia" {{checked data.zaklecia.ochronaognia}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.FireProtection'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.przeczyszczajacy" {{checked data.zaklecia.przeczyszczajacy}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.ClearPotion'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.pobudzajacy" {{checked data.zaklecia.pobudzajacy}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Pobudza'}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rok-sekcja">
+                        <div class="rok-naglowek">{{localize 'HOGWART.Spells.5Year'}}</div>
+                        <ul class="lista-zaklec">
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.anapneo" {{checked data.zaklecia.anapneo}} />
+                                <i class="fas fa-heart ikona-leczenie" title="Leczenie"></i>
+                                <span class="nazwa-zaklecia">Anapneo</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Anapneo'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.vulnerasanentur" {{checked data.zaklecia.vulnerasanentur}} />
+                                <i class="fas fa-heart ikona-leczenie" title="Leczenie"></i>
+                                <span class="nazwa-zaklecia">Vulnera Sanentur</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Sanentur'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.aperio" {{checked data.zaklecia.aperio}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Aperio</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Aperio'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.colloportus" {{checked data.zaklecia.colloportus}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Colloportus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Colloportus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.expectopatronum" {{checked data.zaklecia.expectopatronum}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Expecto Patronum</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Patronum'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.repellomuggletum" {{checked data.zaklecia.repellomuggletum}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Repello Muggletum</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Muggletum'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.silencio" {{checked data.zaklecia.silencio}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Silencio</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Silencio'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.specialisrevelio" {{checked data.zaklecia.specialisrevelio}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Specialis Revelio</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Specialis'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.cantis" {{checked data.zaklecia.cantis}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Cantis</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Cantis'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.oppugno" {{checked data.zaklecia.oppugno}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Oppugno</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Oppugno'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.relashio" {{checked data.zaklecia.relashio}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Relashio</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Relashio'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.evanesco" {{checked data.zaklecia.evanesco}} />
+                                <i class="fas fa-wine-glass ikona-transmutacja" title="Transmutacja"></i>
+                                <span class="nazwa-zaklecia">Evanesco</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Evanesco'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.protegototalum" {{checked data.zaklecia.protegototalum}} />
+                                <i class="fas fa-shield-alt ikona-obrona" title="Obrona"></i>
+                                <span class="nazwa-zaklecia">Protego Totalum</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Totalum'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.amortencja" {{checked data.zaklecia.amortencja}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Amortencja1'}}</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Amortencja2'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.zaciemniajacyumysl" {{checked data.zaklecia.zaciemniajacyumysl}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.zaciemniajacy'}}</span> 
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.esencjadyptamu" {{checked data.zaklecia.esencjadyptamu}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.dyptamu1'}}</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.dyptamu2'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.antidotumamortencja" {{checked data.zaklecia.antidotumamortencja}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.AntidotumA'}}</span> 
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.wyostrzajacyhumor" {{checked data.zaklecia.wyostrzajacyhumor}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.humoru'}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rok-sekcja">
+                        <div class="rok-naglowek">{{localize 'HOGWART.Spells.6Year'}}</div>
+                        <ul class="lista-zaklec">
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.aguamenti" {{checked data.zaklecia.aguamenti}} />
+                                <i class="fas fa-wine-glass ikona-transmutacja" title="Transmutacja"></i>
+                                <span class="nazwa-zaklecia">Aguamenti</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Aguamenti'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.aportacja" {{checked data.zaklecia.aportacja}} />
+                                <i class="fas fa-wine-glass ikona-transmutacja" title="Transmutacja"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Aportacja1'}}</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Aportacja2'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.confundo" {{checked data.zaklecia.confundo}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Confundo</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Confundo'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.deprimo" {{checked data.zaklecia.deprimo}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Deprimo</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Deprimo'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.muffliato" {{checked data.zaklecia.muffliato}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Muffliato</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Muffliato'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.revelio" {{checked data.zaklecia.revelio}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Revelio</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Revelio'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.ebublio" {{checked data.zaklecia.ebublio}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Ebublio</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Ebublio'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.flipendo" {{checked data.zaklecia.flipendo}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Flipendo</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Flipendo'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.jezlep" {{checked data.zaklecia.jezlep}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Jezlep1'}}</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Jezlep2'}}</span>
+</li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.melofors" {{checked data.zaklecia.melofors}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Melofors</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Melofors'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.pullus" {{checked data.zaklecia.pullus}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Pullus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Pullus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.emendo" {{checked data.zaklecia.emendo}} />
+                                <i class="fas fa-heart ikona-leczenie" title="Leczenie"></i>
+                                <span class="nazwa-zaklecia">Emendo</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Emendo'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.gemino" {{checked data.zaklecia.gemino}} />
+                                <i class="fas fa-bolt ikona-klatwa" title="Klątwa"></i>
+                                <span class="nazwa-zaklecia">Gemino</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Gemino'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.zywejsmierci" {{checked data.zaklecia.zywejsmierci}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.smierci'}}</span> 
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.duszacygaz" {{checked data.zaklecia.duszacygaz}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.gaz1'}}</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.gaz2'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.dodajacywigoru" {{checked data.zaklecia.dodajacywigoru}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.wigor'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.veritaserum" {{checked data.zaklecia.veritaserum}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">Veritaserum</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Veritaserum'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.antidotumveritaserum" {{checked data.zaklecia.antidotumveritaserum}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Antidotum'}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rok-sekcja">
+                        <div class="rok-naglowek">{{localize 'HOGWART.Spells.7Year'}}</div>
+                        <ul class="lista-zaklec">
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.baubillious" {{checked data.zaklecia.baubillious}} />
+                                <i class="fas fa-wine-glass ikona-transmutacja" title="Transmutacja"></i>
+                                <span class="nazwa-zaklecia">Baubillious</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Baubillious'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.confrigo" {{checked data.zaklecia.confrigo}} />
+                                <i class="fas fa-bolt ikona-klatwa" title="Klątwa"></i>
+                                <span class="nazwa-zaklecia">Confringo</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Confringo'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.duro" {{checked data.zaklecia.duro}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Duro</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Duro'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.homenumrevelio" {{checked data.zaklecia.homenumrevelio}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Homenum Revelio</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Homenum'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.legillimens" {{checked data.zaklecia.legillimens}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Legilimens</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Legilimens'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.obliviate" {{checked data.zaklecia.obliviate}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Obliviate</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Obliviate'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.portus" {{checked data.zaklecia.portus}} />
+                                <i class="fas fa-star-of-life ikona-urok" title="Urok"></i>
+                                <span class="nazwa-zaklecia">Portus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Portus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.fiantoduri" {{checked data.zaklecia.fiantoduri}} />
+                                <i class="fas fa-shield-alt ikona-obrona" title="Obrona"></i>
+                                <span class="nazwa-zaklecia">Fianto Duri</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Duri'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.levicorpus" {{checked data.zaklecia.levicorpus}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Levicorpus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Levicorpus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.mutatio" {{checked data.zaklecia.mutatio}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Mutatio</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Mutatio'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.redactum" {{checked data.zaklecia.redactum}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Redactum</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Redactum'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.vermiculus" {{checked data.zaklecia.vermiculus}} />
+                                <i class="fas fa-bahai ikona-zly-urok" title="Zły Urok"></i>
+                                <span class="nazwa-zaklecia">Vermiculus</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Vermiculus'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.uzupelniajacykrew" {{checked data.zaklecia.uzupelniajacykrew}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.krew'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.wzbudzajacye" {{checked data.zaklecia.wzbudzajacye}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.euforia'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.felixfelicis" {{checked data.zaklecia.felixfelicis}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">Felix Felicis</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Felicis'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.zanikpamieci" {{checked data.zaklecia.zanikpamieci}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.zanik'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.wielosokowy" {{checked data.zaklecia.wielosokowy}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.wielosokowy1'}}</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.wielosokowy2'}}</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="data.zaklecia.szkielewzro" {{checked data.zaklecia.szkielewzro}} />
+                                <i class="fas fa-flask ikona-eliksir" title="Eliksir"></i>
+                                <span class="nazwa-zaklecia">{{localize 'HOGWART.Spells.Szkiele-Wzro1'}}</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Spells.Szkiele-Wzro2'}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="kolumna-legenda">
+                    <div class="legenda-sekcja">
+                        <div class="legenda-naglowek">{{localize 'HOGWART.Legend.LegendaTyt'}}</div>
+                        <div class="legenda-siatka">
+                            <div class="legenda-item"><i class="fas fa-star-of-life ikona-urok"></i> {{localize 'HOGWART.Legend.Uroki'}}</div>
+                            <div class="legenda-item"><i class="fas fa-heart ikona-leczenie"></i> {{localize 'HOGWART.Legend.Leczenie'}}</div>
+                            <div class="legenda-item"><i class="fas fa-bolt ikona-klatwa"></i> {{localize 'HOGWART.Legend.Curse'}}</div>
+                            <div class="legenda-item"><i class="fas fa-bahai ikona-zly-urok"></i> {{localize 'HOGWART.Legend.BadUroki'}}</div>
+                            <div class="legenda-item"><i class="fas fa-shield-alt ikona-obrona"></i> {{localize 'HOGWART.Legend.Obrona'}}</div>
+                            <div class="legenda-item"><i class="fas fa-flask ikona-eliksir"></i> {{localize 'HOGWART.Legend.Eliksiry'}}</div>
+                            <div class="legenda-item"><i class="fas fa-wine-glass ikona-transmutacja"></i> {{localize 'HOGWART.Legend.Transmutacja'}}</div>
+                            <div></div> 
+                            <div class="legenda-item cala-szerokosc"><i class="fas fa-skull ikona-niewybaczalne"></i>{{localize 'HOGWART.Legend.Niewybaczalne'}}</div>
+                        </div>
+                        <div class="legenda-przypisy">
+                            <p><strong>*</strong> {{localize 'HOGWART.Legend.Patronus'}}</p>
+                            <p><strong>**</strong> {{localize 'HOGWART.Legend.Aportacja'}}</p>
+                            <p><strong>***</strong> {{localize 'HOGWART.Legend.Portus'}}</p>
+                        </div>
+                    </div>
+                    <div class="rok-sekcja" style="margin-top: 20px;">
+                        <div class="rok-naglowek">{{localize 'HOGWART.Legend.Stany'}}</div>
+                        <div class="opis-zasad" style="padding: 10px; font-size: 13px; line-height: 1.5; color: #aaa; ">
+                            <p style="margin-bottom: 10px;">
+                                {{{localize 'HOGWART.Legend.Stany2'}}}
+                            </p>
+                            <p style="margin-bottom: 10px;">
+                                {{{localize 'HOGWART.Legend.Obronne'}}}
+                            </p>
+                            <p style="margin-bottom: 10px;">
+                                {{{localize 'HOGWART.Legend.Hexeds'}}}
+                            </p>
+                            <p style="margin-top: 0;">
+                                {{{localize 'HOGWART.Legend.CursedS'}}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="rok-sekcja" style="margin-top: 20px;">
+                        <div class="rok-naglowek">{{localize 'HOGWART.Legend.NaukaTyt'}}</div>
+                        <div class="opis-zasad" style="padding: 10px; font-size: 13px; line-height: 1.5; color: #aaa; ">
+                            <p style="margin-bottom: 10px;">
+                                {{localize 'HOGWART.Legend.Nauka1'}}
+                            </p>
+                            <p style="margin-bottom: 10px;">
+                                {{localize 'HOGWART.Legend.Nauka2'}}
+                            </p>
+                            <p style="margin-top: 0;">
+                                {{localize 'HOGWART.Legend.Nauka3'}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="rok-sekcja" style="margin-top: 20px;">
+                        <div class="rok-naglowek">{{localize 'HOGWART.Legend.NieTytul'}}</div>
+                        <div class="opis-zasad" style="padding: 10px; font-size: 13px; line-height: 1.5; color: #aaa;">
+                            <p style="margin-bottom: 10px;">
+                                {{{localize 'HOGWART.Legend.nieOpis'}}}
+                            </p>
+                            <p style="margin-bottom: 15px;">
+                                {{localize 'HOGWART.Legend.nieOpis2'}}
+                            </p>
+                            <ul class="lista-zaklec" style="margin: 0; padding: 0; list-style: none;">
+                                <li style="margin-bottom: 8px;">
+                                    <input type="checkbox" name="data.zaklecia.avadakedavra" {{checked data.zaklecia.avadakedavra}} />
+                                    <i class="fas fa-skull ikona-niewybaczalne" title="Zaklęcie niewybaczalne"></i>
+                                    <span class="nazwa-zaklecia">Avada Kedavra</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Legend.avada'}}</span>
+                                </li>
+                                <li style="margin-bottom: 8px;">
+                                    <input type="checkbox" name="data.zaklecia.cruciatus" {{checked data.zaklecia.cruciatus}} />
+                                    <i class="fas fa-skull ikona-niewybaczalne" title="Zaklęcie niewybaczalne"></i>
+                                    <span class="nazwa-zaklecia">{{localize 'HOGWART.Legend.crucio2'}}</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Legend.crucio'}}</span>
+                                </li>
+                                <li style="margin-top: 0;">
+                                    <input type="checkbox" name="data.zaklecia.imperio" {{checked data.zaklecia.imperio}} />
+                                    <i class="fas fa-skull ikona-niewybaczalne" title="Zaklęcie niewybaczalne"></i>
+                                    <span class="nazwa-zaklecia">Imperio</span> — <span class="opis-zaklecia">{{localize 'HOGWART.Legend.Imperio'}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{> "systems/systemHogwartRPG/templates/actor-history.hbs"}}
+    </section>
+</form>

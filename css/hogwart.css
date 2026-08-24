@@ -1,0 +1,1265 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Signika:wght@400;600&display=swap');
+@import url("./pause.css");
+
+.hogwart-actor-sheet .window-content {
+    background: #1a1a1a !important;
+    color: #eeeeee !important;
+    font-family: 'Signika', sans-serif !important;
+    padding: 15px !important;
+}
+
+
+.header-container-wrapper {
+    width: 100% !important;
+    border-bottom: 2px solid #444 !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 25px !important;
+    flex: 0 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+}
+
+.header-row {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    margin-bottom: 20px !important;
+    flex: 0 0 auto !important;
+}
+
+.sub-header-row {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+    padding-left: 290px !important;
+    padding-right: 110px !important;
+    box-sizing: border-box !important;
+    flex: 0 0 auto !important;
+    align-items: flex-start !important;
+}
+
+.sub-row-segment {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 22% !important;
+    border-bottom: 1px solid #555 !important;
+    padding-bottom: 4px !important;
+}
+
+    .sub-row-segment input[type="text"],
+    .sub-row-segment select {
+        background: transparent !important;
+        color: #ffffff !important;
+        border: none !important;
+        font-family: 'Signika', sans-serif !important;
+        font-size: 14px !important;
+        text-align: center !important;
+        text-align-last: center !important;
+        width: 100% !important;
+        padding: 0 !important;
+        height: 24px !important;
+        cursor: pointer;
+    }
+
+    .sub-row-segment label {
+        font-family: 'Signika', sans-serif !important;
+        font-size: 11px !important;
+        color: #888888 !important;
+        margin-top: 6px !important;
+        white-space: nowrap !important;
+    }
+
+.name-container {
+    width: 250px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    top: 45px !important;
+}
+
+.label-imie,
+.label-custom {
+    font-family: 'Cinzel', serif !important;
+    color: #bfa071 !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    margin-bottom: 5px !important;
+    letter-spacing: 1px !important;
+    text-align: left !important;
+}
+
+.name-container input[name="name"],
+.name-container select {
+    font-family: 'Cinzel', serif !important;
+    font-size: 18px !important;
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #bfa071 !important;
+    border-radius: 6px !important;
+    padding: 6px 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.name-container select {
+    font-size: 16px !important;
+    height: 38px !important;
+    cursor: pointer !important;
+}
+
+.profile-img-container {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+.profile-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    background: #000000 !important;
+    border: 2px solid #bfa071 !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: transform 0.2s ease, border-color 0.2s ease !important;
+}
+
+    .profile-img:hover {
+        border-color: #ffffff !important;
+        transform: scale(1.05);
+    }
+
+.wyglad-container {
+    flex: 1 !important;
+    margin: 0 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    min-width: 180px !important;
+}
+
+.wyglad-glowne-haslo {
+    font-family: 'Cinzel', serif !important;
+    font-size: 16px !important;
+    color: #bfa071;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 8px !important;
+}
+
+.wyglad-pola-row {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+    border-bottom: 1px solid #555 !important;
+    padding-bottom: 4px !important;
+}
+
+.wyglad-segment {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 30% !important;
+}
+
+    .wyglad-segment input[type="text"] {
+        background: transparent !important;
+        color: #ffffff !important;
+        border: none !important;
+        font-size: 14px !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding: 0 !important;
+        height: 24px !important;
+    }
+
+    .wyglad-segment label {
+        font-family: 'Signika', sans-serif !important;
+        font-size: 11px !important;
+        color: #888888 !important;
+        margin-top: 6px !important;
+        text-transform: capitalize !important;
+    }
+
+.sekcja-naglowek {
+    font-family: 'Cinzel', serif !important;
+    color: #bfa071 !important;
+    font-size: 24px !important;
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+    text-align: left !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+}
+
+.hogwart-attributes-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 260px !important;
+    margin: 0 !important;
+}
+
+.cecha-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.cecha-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background: #000000 !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 25px !important;
+    padding: 6px 15px !important;
+    width: 260px !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+}
+
+.cecha-klamra {
+    width: 8px !important;
+    height: 70% !important;
+    margin: 0 12px !important;
+    border-left: 2px solid #555 !important;
+    border-top: 2px solid #555 !important;
+    border-bottom: 2px solid #555 !important;
+    flex-shrink: 0 !important;
+}
+
+    .cecha-klamra.jednoliniowa {
+        border-top: none !important;
+        border-left: none !important;
+        border-bottom: 2px solid #555 !important;
+        height: 0 !important;
+        width: 12px !important;
+    }
+
+.cecha-opisy {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 2px !important;
+    flex-grow: 1 !important;
+    flex-shrink: 1 !important;
+    min-width: 0 !important;
+}
+
+    .cecha-opisy div {
+        font-family: 'Signika', sans-serif !important;
+        font-size: 11px !important;
+        color: #dddddd !important;
+        line-height: 1.2 !important;
+        white-space: normal !important;
+    }
+
+.cecha-row .rollable {
+    font-family: 'Cinzel', serif !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+    .cecha-row .rollable i {
+        margin-right: 10px !important;
+        color: #bfa071 !important;
+    }
+
+    .cecha-row .rollable:hover {
+        color: #bfa071 !important;
+        text-shadow: 0 0 8px rgba(191, 160, 113, 0.6) !important;
+    }
+
+.cecha-row input[type="number"] {
+    width: 50px !important;
+    text-align: center !important;
+    height: 30px !important;
+    font-size: 18px !important;
+    background: transparent !important;
+    color: #bfa071 !important;
+    border: none !important;
+    border-bottom: 1px solid #444 !important;
+    font-weight: bold !important;
+}
+
+    .cecha-row input[type="number"]::-webkit-inner-spin-button,
+    .cecha-row input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none !important;
+        margin: 0 !important;
+    }
+
+.field-group {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+.sheet-columns-grid {
+    display: grid !important;
+    grid-template-columns: 260px 1fr 280px !important;
+    gap: 25px !important;
+    margin-top: 15px !important;
+    align-items: flex-start !important;
+}
+
+.custom-banner {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #bfa071 !important;
+    border-radius: 4px !important;
+    padding: 6px 15px !important;
+    font-size: 15px !important;
+    text-align: center !important;
+    letter-spacing: 2px !important;
+    font-weight: bold !important;
+    margin-bottom: 15px !important;
+}
+
+.stany-two-columns {
+    display: flex !important;
+    gap: 20px !important;
+}
+
+.stany-sub-col {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+
+.stan-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+}
+
+    .stan-item input[type="checkbox"] {
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        width: 18px !important;
+        height: 18px !important;
+        border: 2px solid #bfa071 !important;
+        border-radius: 50% !important;
+        background: transparent !important;
+        cursor: pointer !important;
+        flex-shrink: 0 !important;
+        margin-top: 2px !important;
+        position: relative !important;
+    }
+
+        .stan-item input[type="checkbox"]:checked {
+            background: #bfa071 !important;
+        }
+
+.stan-tekst {
+    font-family: 'Signika', sans-serif !important;
+    font-size: 11.5px !important;
+    color: #cccccc !important;
+    line-height: 1.3 !important;
+}
+
+    .stan-tekst strong {
+        color: #ffffff !important;
+    }
+
+.stany-pomocniczy-opis {
+    font-family: 'Signika', sans-serif !important;
+    font-size: 11px !important;
+    color: #888888 !important;
+    font-style: italic !important;
+    margin-top: 10px !important;
+    line-height: 1.3 !important;
+}
+
+.stany-footer {
+    margin-top: 15px !important;
+    border-top: 1px solid #444 !important;
+    padding-top: 10px !important;
+    font-family: 'Signika', sans-serif !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+}
+
+.stany-wyniki-list {
+    margin: 5px 0 10px 15px !important;
+    padding: 0 !important;
+}
+
+    .stany-wyniki-list li {
+        margin-bottom: 3px !important;
+    }
+
+.blizna-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+}
+
+    .blizna-container label {
+        color: #bfa071 !important;
+    }
+
+    .blizna-container input[type="text"] {
+        background: #000000 !important;
+        border: 1px solid #555 !important;
+        color: #fff !important;
+        padding: 5px 10px !important;
+        border-radius: 4px !important;
+    }
+
+
+.zasob-sekcja {
+    margin-bottom: 20px !important;
+}
+
+.zasob-opis {
+    font-family: 'Signika', sans-serif !important;
+    font-size: 11px !important;
+    color: #999999 !important;
+    line-height: 1.3 !important;
+    margin-top: 8px !important;
+}
+
+
+.stars-row, .diamonds-row {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    margin: 10px 0 !important;
+}
+
+.checkbox-star, .checkbox-diamond {
+    display: inline-flex !important;
+    align-items: center;
+    cursor: pointer;
+}
+
+    .checkbox-star input[type="checkbox"],
+    .checkbox-diamond input {
+        appearance: none !important;
+        position: absolute !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+    }
+
+    .checkbox-star span::before {
+        font-family: "Font Awesome 6 Free" !important;
+        font-weight: 400 !important;
+        content: "\f005" !important;
+        font-size: 20px !important;
+        color: #555 !important;
+        display: inline-block !important;
+        transition: color 0.2s ease;
+        cursor: pointer !important;
+    }
+
+    .checkbox-star input[type="checkbox"]:checked + span::before {
+        font-weight: 900 !important;
+        color: #e9c46a !important;
+    }
+
+    .checkbox-diamond span::before {
+        content: "\f0c8" !important;
+        font-family: "Font Awesome 6 Free" !important;
+        font-weight: 400 !important;
+        font-size: 16px !important;
+        color: #555 !important;
+        display: inline-block !important;
+        transform: rotate(45deg) !important;
+        cursor: pointer !important;
+    }
+
+    .checkbox-diamond input:checked + span::before {
+        font-weight: 900 !important;
+        color: #bfa071 !important;
+    }
+
+
+.awans-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+}
+
+.awans-item {
+    font-family: 'Signika', sans-serif !important;
+    font-size: 12px !important;
+    color: #fff !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+}
+
+.awans-dwukrotny {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+    .awans-dwukrotny input[type="checkbox"] {
+        margin: 0;
+        cursor: pointer;
+    }
+
+/* --- RELACJE --- */
+.relacje-sekcja, .zwierzak-sekcja {
+    margin-top: 25px !important;
+    width: 260px !important;
+}
+
+.relacje-naglowek {
+    font-family: 'Cinzel', serif !important;
+    color: #bfa071 !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 12px !important;
+    border-bottom: 1px solid #444 !important;
+    padding-bottom: 4px !important;
+}
+
+.relacje-inputs {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+.relacja-row {
+    display: flex !important;
+    align-items: center !important;
+    background: #000000 !important;
+    border: 1px solid #555 !important;
+    border-radius: 6px !important;
+    padding: 4px 10px !important;
+}
+
+.relacja-icon {
+    font-size: 12px !important;
+    margin-right: 8px !important;
+    flex-shrink: 0 !important;
+}
+
+.przyjaciel-color {
+    color: #c94c4c !important;
+}
+
+.rywal-color {
+    color: #777777 !important;
+}
+
+.relacja-row input[type="text"] {
+    background: transparent !important;
+    border: none !important;
+    color: #ffffff !important;
+    font-family: 'Signika', sans-serif !important;
+    font-size: 12px !important;
+    padding: 2px 0 !important;
+    width: 100px !important;
+}
+
+    .relacja-row input[type="text"]:focus {
+        box-shadow: none !important;
+    }
+
+.relacje-opis, .zwierzak-opis {
+    font-family: 'Signika', sans-serif !important;
+    font-size: 10.5px !important;
+    color: #888888 !important;
+    line-height: 1.3 !important;
+    margin-top: 10px !important;
+    text-align: justify !important;
+}
+
+.zwierzak-row-main {
+    display: flex !important;
+    align-items: flex-end !important;
+    gap: 10px !important;
+    width: 100% !important;
+}
+
+.zwierzak-badge {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 1px solid #555 !important;
+    border-radius: 3px !important;
+    padding: 4px 8px !important;
+    font-family: 'Cinzel', serif !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    flex-shrink: 0 !important;
+    margin-bottom: 14px !important;
+}
+
+.zwierzak-inputs-container {
+    display: flex !important;
+    gap: 10px !important;
+    flex-grow: 1 !important;
+}
+
+.zwierzak-input-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    flex: 1 !important;
+}
+
+    .zwierzak-input-group input[type="text"] {
+        background: transparent !important;
+        border: none !important;
+        border-bottom: 1px solid #ffffff !important;
+        color: #ffffff !important;
+        font-family: 'Signika', sans-serif !important;
+        font-size: 12px !important;
+        text-align: center !important;
+        padding: 2px 0 !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+    }
+
+        .zwierzak-input-group input[type="text"]:focus {
+            box-shadow: none !important;
+            border-bottom: 1px solid #bfa071 !important;
+        }
+
+    .zwierzak-input-group label {
+        font-family: 'Signika', sans-serif !important;
+        font-size: 10px !important;
+        color: #888888 !important;
+        margin-top: 4px !important;
+    }
+
+.ulubiony-przedmiot-sekcja, .magiczne-obiekty-sekcja {
+    margin-top: 30px !important;
+    width: 100% !important;
+}
+
+.przedmioty-inputs {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin: 15px 0 10px 0 !important;
+}
+
+    .przedmioty-inputs input[type="text"],
+    .obiekty-kolumna input[type="text"] {
+        background: transparent !important;
+        border: none !important;
+        border-bottom: 1px solid #ffffff !important;
+        color: #ffffff !important;
+        font-family: 'Signika', sans-serif !important;
+        font-size: 13px !important;
+        text-align: center !important;
+        padding: 4px 0 !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+    }
+
+        .przedmioty-inputs input[type="text"]:focus,
+        .obiekty-kolumna input[type="text"]:focus {
+            box-shadow: none !important;
+            border-bottom: 1px solid #bfa071 !important;
+        }
+
+.przedmiot-opis {
+    font-family: 'Signika', sans-serif !important;
+    font-size: 11px !important;
+    color: #aaaaaa !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
+    margin-top: 8px !important;
+    padding: 0 10px !important;
+}
+
+.obiekty-grid {
+    display: flex !important;
+    gap: 20px !important;
+    margin-top: 15px !important;
+}
+
+.obiekty-kolumna {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    flex: 1 !important;
+}
+
+
+.sheet-tabs,
+.sheet-tabs.tabs {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+    border-bottom: 2px solid #444 !important;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+    gap: 10px !important;
+    flex: 0 0 40px !important;
+    height: 40px !important;
+}
+
+    .sheet-tabs .item {
+        font-family: 'Cinzel', serif !important;
+        font-size: 14px !important;
+        color: #888888 !important;
+        padding: 8px 16px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+        border: 1px solid transparent !important;
+        border-bottom: none !important;
+        border-radius: 5px 5px 0 0 !important;
+        transition: all 0.2s ease !important;
+        cursor: pointer !important;
+        height: auto !important;
+    }
+
+        .sheet-tabs .item:hover {
+            color: #ffffff !important;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3) !important;
+        }
+
+        .sheet-tabs .item.active {
+            color: #bfa071 !important;
+            background: #111111 !important;
+            border: 1px solid #444 !important;
+            border-bottom: 2px solid #111111 !important;
+            margin-bottom: -2px !important;
+        }
+
+        .sheet-tabs .item i {
+            margin-right: 6px !important;
+        }
+
+
+.tab:not(.active),
+.tab-arkusz:not(.active),
+.tab-czary:not(.active),
+.sheet-body .tab:not(.active) {
+    display: none !important;
+}
+
+.tab-czary.active {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+}
+
+
+.czary-kontener {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.kolumna-zaklecia {
+    flex: 0 0 60%;
+}
+
+.kolumna-legenda {
+    flex: 0 0 35%;
+}
+
+.rok-sekcja {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.rok-naglowek,
+.legenda-naglowek {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    padding: 6px 0;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+}
+
+.lista-zaklec {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .lista-zaklec li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        font-size: 1.1em;
+        line-height: 1.4;
+    }
+
+        .lista-zaklec li input[type="checkbox"] {
+            margin-right: 12px;
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+        }
+
+        .lista-zaklec li i,
+        .zaklecie-ikona {
+            margin-right: 10px;
+            font-size: 1.2em;
+            width: 20px;
+            text-align: center;
+        }
+
+.ikona-urok, .typ-urok {
+    color: #d4af37;
+}
+
+.ikona-klatwa, .typ-klatwa {
+    color: #ff4500;
+}
+
+.ikona-obrona {
+    color: #4169e1;
+}
+
+.ikona-zly-urok {
+    color: #9370db;
+}
+
+.ikona-eliksir {
+    color: #32cd32;
+}
+
+.ikona-leczenie {
+    color: #ff69b4;
+}
+
+.ikona-transmutacja, .typ-transmutacja {
+    color: #00ced1;
+}
+
+.ikona-niewybaczalne {
+    color: #4a4a4a;
+}
+
+.typ-iluzja {
+    color: #f5a623;
+}
+
+.nazwa-zaklecia {
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.opis-zaklecia, .typ-eliksir {
+    color: #bbb;
+    margin-left: 4px;
+}
+
+.legenda-siatka {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cala-szerokosc {
+    grid-column: span 2;
+}
+
+.legenda-przypisy {
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    font-size: 0.9em;
+    color: #aaa;
+    line-height: 1.4;
+}
+
+    .legenda-przypisy p {
+        margin-bottom: 8px;
+    }
+
+.hogwart-history-container {
+    padding: 10px;
+}
+
+    .hogwart-history-container .history-title {
+        border-bottom: 2px solid #555;
+        margin-bottom: 12px;
+        padding-bottom: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .hogwart-history-container .history-textarea {
+        width: 100%;
+        resize: vertical;
+        border-radius: 6px;
+        padding: 10px;
+        font-family: inherit;
+        transition: all 0.3s ease;
+    }
+  /* Narrator */
+.narrator-sheet {
+    height: 100%;
+    overflow-y: auto;
+    background: #fdfbf7;
+    color: #111;
+    font-family: inherit;
+    padding: 10px;
+}
+
+.narrator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    padding: 10px;
+    background: #fdfbf7;
+}
+
+.narrator-sheet .block {
+    border: 2px solid #000;
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 12px;
+    background: #fff;
+}
+
+.narrator-sheet h3 {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    margin: -8px -8px 8px -8px;
+    padding: 4px;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.main-pc-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.npc-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.row-header {
+    font-weight: bold;
+    font-size: 0.8em;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+}
+
+.row-inputs input {
+    height: 24px;
+    font-size: 0.85em;
+}
+
+.house-points-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+    .house-points-grid div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.85em;
+        font-weight: bold;
+    }
+
+.past-winner-box {
+    border-top: 1px dashed #666;
+    padding-top: 6px;
+    margin-top: 4px;
+    font-size: 0.85em;
+}
+
+.threat-card {
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 6px;
+    margin-bottom: 8px;
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.threat-title input {
+    font-weight: bold;
+    background: rgba(0,0,0,0.05);
+    margin-bottom: 4px;
+}
+
+.threat-subfield {
+    margin-top: 4px;
+    font-size: 0.8em;
+}
+
+    .threat-subfield label {
+        display: block;
+        color: #444;
+        font-weight: bold;
+    }
+select option {
+    background-color: #191813;
+    color: #f0f0f0;
+    padding: 6px;
+}
+
+select.select-przeklety {
+    background-color: #2b2b2b;
+    color: #ffffff !important;
+    border: 1px solid #7a0303;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-weight: bold;
+}
+
+    select.select-przeklety option {
+        background-color: #191813;
+        color: #ffffff;
+    }
+
+/*  Gryfoni */
+.hogwart-actor-sheet.gryffindor .window-content {
+    background: #1e1212 !important;
+}
+
+.hogwart-actor-sheet.gryffindor .cecha-klamra {
+    border-color: #e09f3e !important;
+}
+
+.hogwart-actor-sheet.gryffindor .label-custom,
+.hogwart-actor-sheet.gryffindor .sekcja-naglowek,
+.hogwart-actor-sheet.gryffindor .cecha-row .rollable i,
+.hogwart-actor-sheet.gryffindor .cecha-row input[type="number"],
+.hogwart-actor-sheet.gryffindor .wyglad-glowne-haslo,
+.hogwart-actor-sheet.gryffindor .rozdzka-glowne-haslo,
+.hogwart-actor-sheet.gryffindor .custom-banner,
+.hogwart-actor-sheet.gryffindor .relacje-naglowek,
+.hogwart-actor-sheet.gryffindor .sheet-tabs .item.active {
+    color: #e09f3e !important;
+}
+
+.hogwart-actor-sheet.gryffindor .name-container input[name="name"],
+.hogwart-actor-sheet.gryffindor .name-container select,
+.hogwart-actor-sheet.gryffindor .profile-img,
+.hogwart-actor-sheet.gryffindor .custom-banner,
+.hogwart-actor-sheet.gryffindor .relacje-naglowek,
+.hogwart-actor-sheet.gryffindor .zwierzak-badge {
+    border-color: #e09f3e !important;
+}
+
+.hogwart-actor-sheet.gryffindor .cecha-row .rollable:hover {
+    color: #e09f3e !important;
+    text-shadow: 0 0 8px rgba(224, 159, 62, 0.6) !important;
+}
+
+.hogwart-history-container.house-gryffindor .history-title,
+.hogwart-history-container.house-Gryffindor .history-title {
+    color: #7a0303;
+    border-bottom-color: #f1c40f;
+}
+
+.hogwart-history-container.house-gryffindor .history-textarea,
+.hogwart-history-container.house-Gryffindor .history-textarea {
+    background: rgba(122, 3, 3, 0.05);
+    border: 2px solid #7a0303;
+    color: white;
+}
+
+    .hogwart-history-container.house-gryffindor .history-textarea:focus,
+    .hogwart-history-container.house-Gryffindor .history-textarea:focus {
+        border-color: #f1c40f;
+        box-shadow: 0 0 8px rgba(241, 196, 15, 0.5);
+        outline: none;
+    }
+
+/* Slizgoni  */
+.hogwart-actor-sheet.slytherin .window-content {
+    background: #0d1611 !important;
+}
+
+.hogwart-actor-sheet.slytherin .cecha-klamra {
+    border-color: #2a9d8f !important;
+}
+
+.hogwart-actor-sheet.slytherin .label-custom,
+.hogwart-actor-sheet.slytherin .sekcja-naglowek,
+.hogwart-actor-sheet.slytherin .cecha-row .rollable i,
+.hogwart-actor-sheet.slytherin .cecha-row input[type="number"],
+.hogwart-actor-sheet.slytherin .wyglad-glowne-haslo,
+.hogwart-actor-sheet.slytherin .rozdzka-glowne-haslo,
+.hogwart-actor-sheet.slytherin .custom-banner,
+.hogwart-actor-sheet.slytherin .relacje-naglowek,
+.hogwart-actor-sheet.slytherin .sheet-tabs .item.active {
+    color: #2a9d8f !important;
+}
+
+.hogwart-actor-sheet.slytherin .name-container input[name="name"],
+.hogwart-actor-sheet.slytherin .name-container select,
+.hogwart-actor-sheet.slytherin .profile-img,
+.hogwart-actor-sheet.slytherin .custom-banner,
+.hogwart-actor-sheet.slytherin .relacje-naglowek,
+.hogwart-actor-sheet.slytherin .zwierzak-badge {
+    border-color: #2a9d8f !important;
+}
+
+.hogwart-actor-sheet.slytherin .cecha-row .rollable:hover {
+    color: #2a9d8f !important;
+    text-shadow: 0 0 8px rgba(42, 157, 143, 0.6) !important;
+}
+
+.hogwart-history-container.house-slytherin .history-title,
+.hogwart-history-container.house-Slytherin .history-title {
+    color: #1e4d2b;
+    border-bottom-color: #a8bba2;
+}
+
+.hogwart-history-container.house-slytherin .history-textarea,
+.hogwart-history-container.house-Slytherin .history-textarea {
+    background: rgba(30, 77, 43, 0.05);
+    border: 2px solid #1e4d2b;
+    color: white;
+}
+
+    .hogwart-history-container.house-slytherin .history-textarea:focus,
+    .hogwart-history-container.house-Slytherin .history-textarea:focus {
+        border-color: #a8bba2;
+        box-shadow: 0 0 8px rgba(168, 187, 162, 0.5);
+        outline: none;
+    }
+
+/* Krukoni */
+.hogwart-actor-sheet.ravenclaw .window-content {
+    background: #0f141d !important;
+}
+
+.hogwart-actor-sheet.ravenclaw .cecha-klamra {
+    border-color: #4a90e2 !important;
+}
+.hogwart-actor-sheet.ravenclaw .label-custom,
+.hogwart-actor-sheet.ravenclaw .sekcja-naglowek,
+.hogwart-actor-sheet.ravenclaw .cecha-row .rollable i,
+.hogwart-actor-sheet.ravenclaw .cecha-row input[type="number"],
+.hogwart-actor-sheet.ravenclaw .wyglad-glowne-haslo,
+.hogwart-actor-sheet.ravenclaw .rozdzka-glowne-haslo,
+.hogwart-actor-sheet.ravenclaw .custom-banner,
+.hogwart-actor-sheet.ravenclaw .relacje-naglowek,
+.hogwart-actor-sheet.ravenclaw .sheet-tabs .item.active {
+    color: #4a90e2 !important;
+}
+
+.hogwart-actor-sheet.ravenclaw .name-container input[name="name"],
+.hogwart-actor-sheet.ravenclaw .name-container select,
+.hogwart-actor-sheet.ravenclaw .profile-img,
+.hogwart-actor-sheet.ravenclaw .custom-banner,
+.hogwart-actor-sheet.ravenclaw .relacje-naglowek,
+.hogwart-actor-sheet.ravenclaw .zwierzak-badge {
+    border-color: #4a90e2 !important;
+}
+
+.hogwart-actor-sheet.ravenclaw .cecha-row .rollable:hover {
+    color: #4a90e2 !important;
+    text-shadow: 0 0 8px rgba(74, 144, 226, 0.6) !important;
+}
+
+.hogwart-history-container.house-ravenclaw .history-title,
+.hogwart-history-container.house-Ravenclaw .history-title {
+    color: white;
+    border-bottom-color: #946b2d;
+}
+
+.hogwart-history-container.house-ravenclaw .history-textarea,
+.hogwart-history-container.house-Ravenclaw .history-textarea {
+    background: rgba(14, 26, 64, 0.05);
+    border: 2px solid #0e1a40;
+    color: white;
+}
+
+    .hogwart-history-container.house-ravenclaw .history-textarea:focus,
+    .hogwart-history-container.house-Ravenclaw .history-textarea:focus {
+        border-color: #946b2d;
+        box-shadow: 0 0 8px rgba(148, 107, 45, 0.5);
+        outline: none;
+    }
+
+/* Puchoni */
+.hogwart-actor-sheet.hufflepuff .window-content {
+    background: #181712 !important;
+}
+
+.hogwart-actor-sheet.hufflepuff .cecha-klamra {
+    border-color: #e9c46a !important;
+}
+
+.hogwart-actor-sheet.hufflepuff .label-custom,
+.hogwart-actor-sheet.hufflepuff .sekcja-naglowek,
+.hogwart-actor-sheet.hufflepuff .cecha-row .rollable i,
+.hogwart-actor-sheet.hufflepuff .cecha-row input[type="number"],
+.hogwart-actor-sheet.hufflepuff .wyglad-glowne-haslo,
+.hogwart-actor-sheet.hufflepuff .rozdzka-glowne-haslo,
+.hogwart-actor-sheet.hufflepuff .custom-banner,
+.hogwart-actor-sheet.hufflepuff .relacje-naglowek,
+.hogwart-actor-sheet.hufflepuff .sheet-tabs .item.active {
+    color: #e9c46a !important;
+}
+
+.hogwart-actor-sheet.hufflepuff .name-container input[name="name"],
+.hogwart-actor-sheet.hufflepuff .name-container select,
+.hogwart-actor-sheet.hufflepuff .profile-img,
+.hogwart-actor-sheet.hufflepuff .custom-banner,
+.hogwart-actor-sheet.hufflepuff .relacje-naglowek,
+.hogwart-actor-sheet.hufflepuff .zwierzak-badge {
+    border-color: #e9c46a !important;
+}
+
+.hogwart-actor-sheet.hufflepuff .cecha-row .rollable:hover {
+    color: #e9c46a !important;
+    text-shadow: 0 0 8px rgba(233, 196, 106, 0.6) !important;
+}
+
+.hogwart-history-container.house-hufflepuff .history-title,
+.hogwart-history-container.house-Hufflepuff .history-title {
+    color: #d49a00;
+    border-bottom-color: #372e29;
+}
+
+.hogwart-history-container.house-hufflepuff .history-textarea,
+.hogwart-history-container.house-Hufflepuff .history-textarea {
+    background: rgba(236, 185, 57, 0.08);
+    border: 2px solid #d49a00;
+    color: white;
+}
+
+    .hogwart-history-container.house-hufflepuff .history-textarea:focus,
+    .hogwart-history-container.house-Hufflepuff .history-textarea:focus {
+        border-color: #372e29;
+        box-shadow: 0 0 8px rgba(55, 46, 41, 0.5);
+        outline: none;
+    }

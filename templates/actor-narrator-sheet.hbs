@@ -1,0 +1,106 @@
+﻿<form class="narrator-sheet" autocomplete="off">
+    <div class="narrator-grid">
+        <div class="column">
+            <div class="block header-block">
+                <label><strong>🌙 {{localize "HOGWART.Narrator.Rok"}}</strong></label>
+                <input type="text" name="system.rok" value="{{system.rok}}" placeholder="{{localize 'HOGWART.Narrator.RokPlaceholder'}}">
+            </div>
+
+            <div class="block">
+                <h3>👈 {{localize "HOGWART.Narrator.GlownePostacie"}} 👉</h3>
+                <div class="row-header main-pc-grid">
+                    <span>{{localize "HOGWART.Narrator.Nazwa"}}</span>
+                    <span>{{localize "HOGWART.Narrator.Dom"}}</span>
+                    <span>{{localize "HOGWART.Narrator.RokKrotki"}}</span>
+                </div>
+                {{#each system.glownePostacie as |pc key|}}
+                <div class="row-inputs main-pc-grid">
+                    <input type="text" name="system.glownePostacie.{{key}}.nazwa" value="{{pc.nazwa}}">
+                    <input type="text" name="system.glownePostacie.{{key}}.dom" value="{{pc.dom}}">
+                    <input type="text" name="system.glownePostacie.{{key}}.rok" value="{{pc.rok}}">
+                </div>
+                {{/each}}
+            </div>
+
+            <div class="block">
+                <h3>⏳ {{localize "HOGWART.Narrator.PunktyDomow"}} ⏳</h3>
+                <div class="house-points-grid">
+                    <div>
+                        <label>{{localize "HOGWART.Narrator.Gryffindor"}}</label>
+                        <input type="number" name="system.punkty.gryffindor" value="{{system.punkty.gryffindor}}">
+                    </div>
+                    <div>
+                        <label>{{localize "HOGWART.Narrator.Hufflepuff"}}</label>
+                        <input type="number" name="system.punkty.hufflepuff" value="{{system.punkty.hufflepuff}}">
+                    </div>
+                    <div>
+                        <label>{{localize "HOGWART.Narrator.Ravenclaw"}}</label>
+                        <input type="number" name="system.punkty.ravenclaw" value="{{system.punkty.ravenclaw}}">
+                    </div>
+                    <div>
+                        <label>{{localize "HOGWART.Narrator.Slytherin"}}</label>
+                        <input type="number" name="system.punkty.slytherin" value="{{system.punkty.slytherin}}">
+                    </div>
+                </div>
+
+                <div class="past-winner-box">
+                    <label><strong>🏆 {{localize "HOGWART.Narrator.ZwyciezcaZeszloroczny"}}</strong></label>
+                    <input type="text" name="system.zeszlorocznyZwyciezca" value="{{system.zeszlorocznyZwyciezca}}" placeholder="{{localize 'HOGWART.Narrator.ZwyciezcaPlaceholder'}}">
+                </div>
+            </div>
+
+        </div>
+        <div class="column">
+            <div class="block">
+                <h3>🕵️ {{localize "HOGWART.Narrator.Tajemnice"}} 🕵️</h3>
+                <textarea name="system.tajemnice" rows="6" placeholder="{{localize 'HOGWART.Narrator.TajemnicePlaceholder'}}">{{system.tajemnice}}</textarea>
+            </div>
+            <div class="block">
+                <h3>♟️ {{localize "HOGWART.Narrator.PostacieNarratora"}} ♟️</h3>
+                <div class="row-header npc-grid">
+                    <span>{{localize "HOGWART.Narrator.Nazwa"}}</span>
+                    <span>{{localize "HOGWART.Narrator.Rola"}}</span>
+                    <span>{{localize "HOGWART.Narrator.Cecha"}}</span>
+                </div>
+                {{#each system.postacieNarratora as |npc key|}}
+                <div class="row-inputs npc-grid">
+                    <input type="text" name="system.postacieNarratora.{{key}}.nazwa" value="{{npc.nazwa}}">
+                    <input type="text" name="system.postacieNarratora.{{key}}.rola" value="{{npc.rola}}">
+                    <input type="text" name="system.postacieNarratora.{{key}}.cecha" value="{{npc.cecha}}">
+                </div>
+                {{/each}}
+            </div>
+
+        </div>
+
+        <div class="column">
+            <div class="block">
+                <h3>💀 {{localize "HOGWART.Narrator.Zagrozenia"}} 💀</h3>
+
+                {{#each system.zagrozenia as |threat key|}}
+                <div class="threat-card">
+                    <div class="threat-title">
+                        <label>{{localize "HOGWART.Narrator.Zagrozenie"}} #{{key}}:</label>
+                        <input type="text" name="system.zagrozenia.{{key}}.tytul" value="{{threat.tytul}}" placeholder="{{localize 'HOGWART.Narrator.ZagrozeniePlaceholder'}}">
+                    </div>
+                    <div class="threat-subfield">
+                        <label>{{localize "HOGWART.Narrator.KogoDotyczy"}}</label>
+                        <input type="text" name="system.zagrozenia.{{key}}.dotyczy" value="{{threat.dotyczy}}">
+                    </div>
+                    <div class="threat-subfield">
+                        <label>{{localize "HOGWART.Narrator.JakaStawka"}}</label>
+                        <input type="text" name="system.zagrozenia.{{key}}.stawka" value="{{threat.stawka}}">
+                    </div>
+                    <div class="threat-subfield">
+                        <label>{{localize "HOGWART.Narrator.JakiKrok"}}</label>
+                        <input type="text" name="system.zagrozenia.{{key}}.krok" value="{{threat.krok}}">
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+
+        </div>
+
+    </div>
+</form>
