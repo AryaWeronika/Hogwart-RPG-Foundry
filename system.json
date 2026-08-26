@@ -2,7 +2,7 @@
   "id": "systemHogwartRPG",
   "title": "Hogwart RPG",
   "description": "Foundry system for Hogwarts RPG, powered by the PBTA engine. Available in English. The system and mechanics were designed by David Brunell-Brutman.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": {
     "minimum": "10",
     "verified": "11",
