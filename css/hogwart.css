@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Signika:wght@400;600&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Signika:wght@400;600&display=swap');
 @import url("./pause.css");
 
 .hogwart-actor-sheet .window-content {
@@ -440,7 +440,6 @@
     align-items: center;
     cursor: pointer;
 }
-
     .checkbox-star input[type="checkbox"],
     .checkbox-diamond input {
         appearance: none !important;
@@ -452,37 +451,38 @@
     }
 
     .checkbox-star span::before {
-        font-family: "Font Awesome 6 Free" !important;
-        font-weight: 400 !important;
+        font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
+        font-weight: 900 !important; 
         content: "\f005" !important;
         font-size: 20px !important;
-        color: #555 !important;
+        color: #555555 !important;
         display: inline-block !important;
-        transition: color 0.2s ease;
+        transition: color 0.2s ease, transform 0.1s ease;
         cursor: pointer !important;
     }
 
     .checkbox-star input[type="checkbox"]:checked + span::before {
         font-weight: 900 !important;
         color: #e9c46a !important;
+        transform: scale(1.1);
     }
 
     .checkbox-diamond span::before {
         content: "\f0c8" !important;
-        font-family: "Font Awesome 6 Free" !important;
-        font-weight: 400 !important;
+        font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
+        font-weight: 900 !important; 
         font-size: 16px !important;
-        color: #555 !important;
+        color: #555555 !important;
         display: inline-block !important;
         transform: rotate(45deg) !important;
+        transition: color 0.2s ease, transform 0.1s ease;
         cursor: pointer !important;
     }
-
     .checkbox-diamond input:checked + span::before {
         font-weight: 900 !important;
         color: #bfa071 !important;
+        transform: rotate(45deg) scale(1.1) !important;
     }
-
 
 .awans-list {
     display: flex !important;
@@ -512,7 +512,6 @@
         cursor: pointer;
     }
 
-/* --- RELACJE --- */
 .relacje-sekcja, .zwierzak-sekcja {
     margin-top: 25px !important;
     width: 260px !important;
