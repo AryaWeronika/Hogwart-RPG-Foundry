@@ -43,7 +43,7 @@
       "zaklecie": {}
     }
   },
-  "manifest": "https://github.com/AryaWeronika/Hogwart-RPG-Foundry/blob/main/system.json",
+  "manifest": "https://github.com/AryaWeronika/Hogwart-RPG-Foundry/releases/latest/download/system.json",
   "download": "https://github.com/AryaWeronika/Hogwart-RPG-Foundry/releases/download/hgw/system.zip",
   "readme": "https://github.com/AryaWeronika/Hogwart-RPG-Foundry/blob/main/README.md"
 }
