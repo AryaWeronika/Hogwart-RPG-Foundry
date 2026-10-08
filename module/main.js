@@ -4,10 +4,7 @@ import { inicjalizujSceneStartowa } from "./sceneManager.js";
 import { setupPDFCompendium } from "./compendium.js";
 import { wykonajRuch } from "./moves.js";
 
-
 export class HogwartActorSheet extends ActorSheet {
-
-
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["hogwart", "sheet", "actor", "hogwart-actor-sheet", "hogwart-custom-sheet"],
@@ -116,7 +113,7 @@ export class HogwartActorSheet extends ActorSheet {
     }
 }
 
-//inicjalizacja foundry
+// Inicjalizacja Foundry
 Hooks.once("init", async function () {
     console.log("Hogwart System | Rejestracja arkuszy i inicjalizacja...");
 
@@ -165,20 +162,5 @@ Hooks.on("renderChatMessage", (message, html) => {
             || (message.speaker?.actor ? game.actors.get(message.speaker.actor) : null);
 
         await wykonajRuch(ruchId, actor, wynik);
-    });
-});
-Hooks.once("init", async function () {
-    console.log("Hogwart System | Rejestracja arkuszy...");
-
-    Actors.registerSheet("systemHogwartRPG", HogwartActorSheet, {
-        types: ["character"],
-        makeDefault: true,
-        label: "Karta Postaci"
-    });
-
-    Actors.registerSheet("systemHogwartRPG", HogwartNarratorSheet, {
-        types: ["narrator"], 
-        makeDefault: true,
-        label: "Panel Narratora"
     });
 });
