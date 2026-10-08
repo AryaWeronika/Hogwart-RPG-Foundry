@@ -33,6 +33,16 @@
       "path": "lang/en.json"
     }
   ],
+  "documentTypes": {
+    "Actor": {
+      "character": {},
+      "narrator": {}
+    },
+    "Item": {
+      "przedmiot": {},
+      "zaklecie": {}
+    }
+  },
   "manifest": "https://github.com/AryaWeronika/Hogwart-RPG-Foundry/blob/main/system.json",
   "download": "https://github.com/AryaWeronika/Hogwart-RPG-Foundry/releases/download/hgw/system.zip",
   "readme": "https://github.com/AryaWeronika/Hogwart-RPG-Foundry/blob/main/README.md"

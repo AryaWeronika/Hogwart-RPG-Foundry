@@ -101,6 +101,6 @@
     }
   },
   "Item": {
-    "types": []
+    "types": [ "przedmiot", "zaklecie" ]
   }
 }
